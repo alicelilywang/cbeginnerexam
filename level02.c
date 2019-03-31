@@ -1,21 +1,14 @@
-
-/* ******************************** 1/15 ispoweroftwo.c ****************************** */
-
-
+/********************************* 1/15 ispoweroftwo.c ****************************** */
 int	    is_power_of_2(unsigned int n)
 {
 	return ((n & (-n)) == n ? 1 : 0);
 }
-
-/* ******************************** 2/15 alphamirror.c ****************************** */
-
+/********************************* 2/15 alphamirror.c ****************************** */
 #include <unistd.h>
-
 int		main(int argc, char *argv[])
 {
 	int		i;
 	char	ltr;
-
 	i = 0;
 	if (argc == 2)
 	{
@@ -33,14 +26,8 @@ int		main(int argc, char *argv[])
 	write(1, "\n", 1);
 	return (0);
 }
-
-
-/* ******************************** 3/15 wdmatch.c ****************************** */
-
-
-
+/********************************* 3/15 wdmatch.c ****************************** */
 #include <unistd.h>
-
 void	ft_putstr(char const *str)
 {
 	int		i;
@@ -49,7 +36,6 @@ void	ft_putstr(char const *str)
 	while (str[i])
 		write(1, &str[i++], 1);
 }
-
 int		main(int argc, char const *argv[])
 {
 	int		i;
@@ -68,11 +54,7 @@ int		main(int argc, char const *argv[])
 	write(1, "\n", 1);
 	return (0);
 }
-
-
-/* ******************************** 4/15 ft_atoi.c ****************************** */
-
-
+/********************************* 4/15 ft_atoi.c ****************************** */
 int		ft_atoi(char *str)
 {
 	int		i;
@@ -94,13 +76,9 @@ int		ft_atoi(char *str)
 		nbr = (nbr * 10) + (str[i++] - '0');
 	return (nbr * sign);
 }
-
-/* ******************************** 5/15 do_op.c ****************************** */
-
-
+/********************************* 5/15 do_op.c ****************************** */
 #include <stdio.h>
 #include <stdlib.h>
-
 int		main(int argc, char *argv[])
 {
 	if (argc == 4)
@@ -119,12 +97,7 @@ int		main(int argc, char *argv[])
 	printf("\n");
 	return (0);
 }
-
-
-
-/* ******************************** 6/15 ft_strcmp.c ****************************** */
-
-
+/********************************* 6/15 ft_strcmp.c ****************************** */
 int		ft_strcmp(char *s1, char *s2)
 {
 	while (*s1 && (*s1 == *s2))
@@ -134,11 +107,7 @@ int		ft_strcmp(char *s1, char *s2)
 	}
 	return (*s1 - *s2);
 }
-
-
-/* ******************************** 7/15 ft_strdup.c ****************************** */
-
-
+/********************************* 7/15 ft_strdup.c ****************************** */
 #include <stdlib.h>
 
 int		ft_strlen(char *str)
@@ -150,7 +119,6 @@ int		ft_strlen(char *str)
 		i += 1;
 	return (i);
 }
-
 char	*ft_strdup(char *src)
 {
 	char	*cpy;
@@ -164,10 +132,7 @@ char	*ft_strdup(char *src)
 	cpy[i] = '\0';
 	return (cpy);
 }
-
-
-/* ******************************** 8/15 ft_strrev.c ****************************** */
-
+/********************************* 8/15 ft_strrev.c ****************************** */
 char		*ft_strrev(char *str)
 {
 	int		i;
@@ -187,14 +152,8 @@ char		*ft_strrev(char *str)
 	str[i] = '\0';
 	return (str);
 }
-
-
-
-/* ******************************** 9/15 union.c ****************************** */
-
-
+/********************************* 9/15 union.c ****************************** */
 #include <unistd.h>
-
 void	ft_union(char *str1, char *str2)
 {
 	int		i;
@@ -221,7 +180,6 @@ void	ft_union(char *str1, char *str2)
 		i += 1;
 	}
 }
-
 int		main (int argc, char *argv[])
 {
 	if (argc == 3)
@@ -229,12 +187,8 @@ int		main (int argc, char *argv[])
 	write(1, "\n", 1);
 	return (0);
 }
-
-
-/* ******************************** 10/15 inter.c ****************************** */
-
+/********************************* 10/15 inter.c ****************************** */
 #include <unistd.h>
-
 int     iter(char *str, char c, int len)
 {
     int     i;
@@ -245,7 +199,6 @@ int     iter(char *str, char c, int len)
             return (1);
     return (0);
 }
-
 int     main(int argc, char *argv[])
 {
     int     i;
@@ -263,18 +216,13 @@ int     main(int argc, char *argv[])
     write(1, "\n", 1);
     return (0);
 }
-
-/* ******************************** 11/15 last_word.c ****************************** */
-
-
+/********************************* 11/15 last_word.c ****************************** */
 #include <unistd.h>
-
 void	fn_word(char *str, int *i)
 {
 	while (str[*i] != ' ' && str[*i] != '\t' && str[*i])
 		(*i) += 1;
 }
-
 void	print_word(char *str, int start, int end)
 {
 	int		i;
@@ -284,7 +232,6 @@ void	print_word(char *str, int start, int end)
 	while (str[i] && str[i] != ' ' && str[i] != '\t' && end--)
 		write(1, &str[i++], 1);
 }
-
 int		main(int argc, char **argv)
 {
 	int		i;
@@ -312,9 +259,7 @@ int		main(int argc, char **argv)
 	write(1, "\n", 1);
 	return (0);
 }
-
-/* ******************************** 12/15 max.c ****************************** */
-
+/********************************* 12/15 max.c ****************************** */
 int		max(int *tab, unsigned int len)
 {
 	int		i;
@@ -331,13 +276,8 @@ int		max(int *tab, unsigned int len)
 	}
 	return (max_value);
 }
-
-
-/* ******************************** 13/15 print_bits.c ****************************** */
-
-
+/********************************* 13/15 print_bits.c ****************************** */
 #include <unistd.h>
-
 void	print_bits(unsigned char octet)
 {
 	int				i;
@@ -350,11 +290,7 @@ void	print_bits(unsigned char octet)
 		write(1, &bit, 1);
 	}
 }
-
-
-/* ******************************** 14/15 reverse_bits.c ****************************** */
-
-
+/********************************* 14/15 reverse_bits.c ****************************** */
 unsigned char   reverse_bits(unsigned char octet)
 {
 	return  (((octet >> 0) & 1) << 7) | \
@@ -366,10 +302,7 @@ unsigned char   reverse_bits(unsigned char octet)
 			(((octet >> 6) & 1) << 1) | \
 			(((octet >> 7) & 1) << 0);
 }
-
-/* ******************************** 15/15 swap_bits.c ****************************** */
-
-
+/********************************* 15/15 swap_bits.c ****************************** */
 unsigned char	swap_bits(unsigned char c)
 {
 	return ((c >> 4) | (c << 4));
