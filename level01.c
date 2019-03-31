@@ -38,25 +38,6 @@ void	ft_putstr(char *str)
 		write(1, &str[i++], 1);
 }
 
-
-/* ********************************* ft_putstr.c ******************************** */
-
-
-char	*ft_strcpy(char *dst, const char *src)
-{
-	int		i;
-
-	i = 0;
-	while (src[i])
-	{
-		dst[i] = src[i];
-		i += 1;
-	}
-	dst[i] = '\0';
-	return (dst);
-}
-
-
 /* ********************************* ft_strcpy.c ******************************** */
 
 
